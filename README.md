@@ -1,3 +1,6 @@
+#changelog 2016-08-15
+1. changed IEEE80211_NUM_BANDS, IEEE80211_BAND_2GHZ and IEEE80211_BAND_5GHZ to NUM_NL80211_BANDS, NL80211_BAND_2GHZ and NL80211_BAND_5GHZ in include/cfg80211.h and os/linux/rt_linux.c 
+
 #changelog 2016-04-04
 1. theoretically supported products (common/rtusb_dev_id.c):
  * {USB_DEVICE(0x148F,0x7610)}, /* MT7610U Ralink VID */
@@ -43,7 +46,7 @@ Ubuntu: sudo apt-get install git build-essential
 ```
 $ mkdir ~/src
 $ cd ~/src
-$ git clone https://github.com/Myria-de/mt7610u_wifi_sta_v3002_dpo_20130916.git
+$ git clone https://github.com/luben93/mt7610u_wifi_sta_v3002_dpo_20130916.git
 $ make
 $ make install
 $ cp RT2870STA.dat  /etc/Wireless/RT2870STA/RT2870STA.dat
