@@ -3220,9 +3220,13 @@ VOID CFG80211OS_ScanEnd(
 #ifdef CONFIG_STA_SUPPORT
 	CFG80211_CB *pCfg80211_CB = (CFG80211_CB *)pCB;
 
+	struct cfg80211_scan_info scan_info = {
+		.aborted = FlgIsAborted
+	};
+
 
 	CFG80211DBG(RT_DEBUG_ERROR, ("80211> cfg80211_scan_done\n"));
-	cfg80211_scan_done(pCfg80211_CB->pCfg80211_ScanReq, FlgIsAborted);
+	cfg80211_scan_done(pCfg80211_CB->pCfg80211_ScanReq, &scan_info);
 #endif /* CONFIG_STA_SUPPORT */
 #endif /* LINUX_VERSION_CODE */
 }
